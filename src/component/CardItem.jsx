@@ -28,7 +28,7 @@ const CardItem = (props) => {
 
 function mapStateProps(state){
     return{
-        count: state.count,
+        procount: state.procount,
     }
   
   }

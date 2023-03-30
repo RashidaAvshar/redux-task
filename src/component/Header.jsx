@@ -14,7 +14,7 @@ const Header = (props) => {
                     <li><Link to="/product">Card</Link></li>
                 </ul>
                 <ul className='icon'>
-                    <li><i className="fa-solid fa-bag-shopping">{props.count}</i></li>
+                    <li><i className="fa-solid fa-bag-shopping">{props.procount}</i></li>
                 </ul>
             </div>
         </div>
@@ -24,7 +24,7 @@ const Header = (props) => {
 
 function mapStateProps(state){
     return{
-        count: state.count,
+        procount: state.procount,
     }
 
 }

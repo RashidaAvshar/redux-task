@@ -5,7 +5,7 @@ import CardItem from '../component/CardItem';
 
 
 
-const Product = (props) => {
+const Product = () => {
 
     const [data, setData] = useState([])
     useEffect(()=>{
@@ -24,16 +24,18 @@ const Product = (props) => {
           <CardItem key={item.id} title = {item.title} description = {item.description} image = {item.image} price={item.price}/>
         ))
       }
-    </div>           
+    </div>
+           
     </div>
   )
 }
 
 function mapStateProps(state){
   return{
-      count: state.count,
+      procount: state.procount,
   }
 
 }
 
-export default connect(mapStateProps) (Product)
+// export default connect(mapStateProps) (Product)
+export default Product

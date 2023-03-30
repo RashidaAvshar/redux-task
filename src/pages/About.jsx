@@ -14,7 +14,6 @@ const About = (props) => {
         </button >
         <Showcount />
         <button onClick={()=>{ 
-            if(props.count>0)
             props.dispatch({type: "DECREMENT"})
         }}>
             -

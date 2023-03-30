@@ -8,7 +8,8 @@ import { BrowserRouter } from "react-router-dom";
 import { action } from './redux/actions/action';
 
 const initialState = {
-  count: 0
+  count: 0,
+  procount: 0
 }
 const {increment, decrement, addToCard} = action;
 
@@ -16,17 +17,29 @@ function reducer(state=initialState, action){
   switch(action.type){
     case increment:{
       return{
+        ...state,
         count:state.count +1
       };
     }
     case decrement:{
-      return{
-        count:state.count -1
-      };
+      if(state.count==0){
+        alert("menfi olmaz")
+        return{
+          ...state,
+          count:state.count
+        };
+      }else{
+        return{
+          ...state,
+          count:state.count -1
+        };
+      }
+      
     }
     case addToCard:{
       return{
-        count: state.count +1
+        ...state,
+        procount: state.procount +1
       }
     }
     default: 
