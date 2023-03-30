@@ -18,8 +18,7 @@ const Home = () => {
         <Showcount count={count}/>
         <button onClick={()=>setCount(count+1)}>
             +
-        </button>
-      
+        </button>      
     </div>
   )
 }

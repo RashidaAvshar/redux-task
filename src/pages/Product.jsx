@@ -21,11 +21,10 @@ const Product = (props) => {
     <div className='cards-box'>
     {
         data.map(item=>(
-          <CardItem key={item.id} title = {item.title} description = {item.description} image = {item.image}/>
+          <CardItem key={item.id} title = {item.title} description = {item.description} image = {item.image} price={item.price}/>
         ))
       }
-    </div>
-           
+    </div>           
     </div>
   )
 }
